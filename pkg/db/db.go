@@ -22,8 +22,8 @@ CREATE TABLE scheduler (
 CREATE INDEX idx_date ON scheduler(date);
 `
 
-// Init инициализирует базу данных
 func Init(dbFile string) error {
+
 	_, err := os.Stat(dbFile)
 	install := os.IsNotExist(err)
 

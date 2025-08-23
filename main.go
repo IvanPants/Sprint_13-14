@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+
 	dbFile := "scheduler.db"
 	if err := db.Init(dbFile); err != nil {
 		log.Fatalf("Ошибка инициализации базы данных: %v", err)
@@ -22,6 +23,7 @@ func main() {
 }
 
 func getPort() string {
+
 	if port := os.Getenv("TODO_PORT"); port != "" {
 		return port
 	}
